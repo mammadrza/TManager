@@ -1,3 +1,12 @@
+<?php
+
+    if(isset($_SESSION['user_login']) == FALSE){
+        $this->session->set_flashdata('err','Zəhmət olmasa email və şifrə daxil edin!');
+        redirect(base_url('adminius'));
+    }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 

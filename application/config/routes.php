@@ -50,10 +50,77 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 $route['default_controller'] = 'AdminCont/index';
-$route['profile'] = 'AdminCont/profile';
-$route['tasks'] = 'AdminCont/tasks';
-$route['more'] = 'AdminCont/more';
-$route['allUsers'] = 'AdminCont/allUsers';
+$route['adminius'] = 'AdminCont/index';
+$route['loginAct'] = 'AdminCont/loginAct';
+$route['logOut'] = 'AdminCont/logOut';
+
 $route['dashboard'] = 'AdminCont/dashboard';
+
+
+$route['profile'] = 'AdminCont/profile';
+$route['editProfile/(.*)'] = 'AdminCont/editProfile/$1';
+$route['editProfileAct/(.*)'] = 'AdminCont/editProfileAct/$1';
+
+
+
+
+
+$route['addUser'] = 'AdminCont/addUser';
+$route['addUserAct'] = 'AdminCont/addUserAct';
+$route['deleteUser/(.*)'] = 'AdminCont/deleteUser/$1';
+$route['updateUser/(.*)'] = 'AdminCont/updateUser/$1';
+$route['updateUserAct/(.*)'] = 'AdminCont/updateUserAct/$1';
+$route['updateUserPass/(.*)'] = 'AdminCont/updateUserPass/$1';
+
+
+
+
+$route['allUsers'] = 'AdminCont/allUsers';
+$route['tasks'] = 'AdminCont/tasks';
+
+
+$route['tasksToMe'] = 'AdminCont/tasksForMe';
+
+
+//$route['userTasks'] = 'AdminCont/userTasks';
+
+$route['more/(.*)'] = 'AdminCont/more/$1';
+
+
+//$route['abortPage/(.*)'] = 'AdminCont/abortPage/$1';
+
+$route['taskStatusAnswerYes/(.*)'] = 'AdminCont/taskStatusAnswerYes/$1';
+$route['taskStatusAnswerNo/(.*)'] = 'AdminCont/taskStatusAnswerNo/$1';
+$route['taskFinish/(.*)'] = 'AdminCont/taskFinish/$1';
+
+
+//ADMIN
+$route['addTask'] = 'AdminCont/addTask';
+$route['addTaskAction'] = 'AdminCont/addTaskAction';
+//ADMIN
+
+
+
+
+//USER
+$route['userTaskAdd'] = 'AdminCont/userTaskAdd';
+$route['userTaskAddAct'] = 'AdminCont/userTaskAddAct';
+//USER
+
+$route['deleteTask/(.*)'] = 'AdminCont/deleteTask/$1';
+
+$route['redirectPage/(.*)'] = 'AdminCont/redirectPage/$1';
+$route['redirectPageAct/(.*)'] = 'AdminCont/redirectPageAct/$1';
+
+
+$route['updateTask/(.*)'] = 'AdminCont/updateTask/$1';
+$route['updateTaskAct/(.*)'] = 'AdminCont/updateTaskAct/$1';
+
+
+
+
+
+
+
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
